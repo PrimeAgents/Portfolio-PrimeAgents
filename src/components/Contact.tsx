@@ -35,9 +35,17 @@ const Contact: React.FC = () => {
                     <Mail className="w-6 h-6 text-prime-light group-hover:animate-pulse" />
                   </div>
                   <div>
-                    <p className="font-secondary text-prime-light font-semibold">Email</p>
-                    <p className="font-secondary text-prime-gray">prime.agents01@gmail.com
-                    </p>
+                    <p className="font-secondary text-prime-light font-semibold">Upwork</p>
+                    {/* <p className="font-secondary text-prime-gray">prime.agents01@gmail.com */}
+                    <a 
+                      href="https://www.upwork.com/freelancers/~01d9cb8461d264d355" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-secondary text-prime-gray hover:text-prime-light transition-colors duration-300"
+                    >
+                      Youness I.
+                    </a>
+                    {/* </p> */}
                   </div>
                 </div>
 
