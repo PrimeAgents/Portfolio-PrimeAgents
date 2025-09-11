@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Right side - Contact form */}
-            <div className="bg-prime-dark/30 backdrop-blur-sm border border-prime-gray/20 rounded-2xl p-8">
+            {/* <div className="bg-prime-dark/30 backdrop-blur-sm border border-prime-gray/20 rounded-2xl p-8">
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block font-secondary text-prime-light font-semibold mb-2">
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                   <Send className="w-5 h-5 ml-2 group-hover:animate-pulse" />
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
