@@ -1,28 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, Brain } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-prime-black neural-bg">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 circuit-pattern opacity-20"></div>
+      {/* Particle animation background */}
+      <ParticleBackground />
+      
+      {/* Subtle overlay for better text readability */}
+      <div className="absolute inset-0 bg-prime-black/20 z-5"></div>
       
       {/* Floating AI icons */}
-      <div className="absolute top-20 left-10 animate-float">
+      <div className="absolute top-20 left-10 animate-float z-10">
         <Bot className="w-8 h-8 text-prime-light/30" />
       </div>
-      <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '1s' }}>
+      <div className="absolute top-40 right-20 animate-float z-10" style={{ animationDelay: '1s' }}>
         <Brain className="w-6 h-6 text-prime-gray/40" />
       </div>
-      <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: '2s' }}>
+      <div className="absolute bottom-40 left-20 animate-float z-10" style={{ animationDelay: '2s' }}>
         <Zap className="w-7 h-7 text-prime-light/25" />
       </div>
-      <div className="absolute bottom-20 right-10 animate-float" style={{ animationDelay: '0.5s' }}>
+      <div className="absolute bottom-20 right-10 animate-float z-10" style={{ animationDelay: '0.5s' }}>
         <Shield className="w-8 h-8 text-prime-gray/30" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <div className="space-y-8">
           {/* Profile Photo */}
           <motion.div 
@@ -31,7 +35,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex justify-center mb-8"
           >
-            <div className="w-32 h-32 bg-gradient-to-r from-prime-light to-prime-gray rounded-full flex items-center justify-center text-6xl font-asimovian font-bold text-prime-black">
+            <div className="w-32 h-32 bg-gradient-to-r from-prime-light to-prime-gray rounded-full flex items-center justify-center text-6xl font-asimovian font-bold text-prime-black shadow-2xl">
               Y
             </div>
           </motion.div>
