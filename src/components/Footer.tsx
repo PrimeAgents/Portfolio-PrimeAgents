@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Bot } from 'lucide-react';
+import { Github, User, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,15 +8,15 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           {/* Logo and name */}
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-r from-prime-light to-prime-gray rounded-xl">
-              <Bot className="w-6 h-6 text-prime-black" />
+            <div className="w-10 h-10 bg-gradient-to-r from-prime-light to-prime-gray rounded-xl flex items-center justify-center">
+              <span className="font-asimovian text-prime-black font-bold text-lg">Y</span>
             </div>
             <div>
               <h3 className="font-asimovian text-xl font-bold text-prime-light">
-                PrimeAgents
+                Youness
               </h3>
               <p className="font-secondary text-sm text-prime-gray">
-                AI & IT Solutions Agency
+                AI Engineer & Full-Stack Developer
               </p>
             </div>
           </div>
@@ -24,7 +24,16 @@ const Footer: React.FC = () => {
           {/* Links */}
           <div className="flex items-center space-x-8">
             <a
-              href="https://github.com/PrimeAgents"
+              href="https://linkedin.com/in/youness-ai-engineer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-prime-gray hover:text-prime-light transition-colors duration-300 group"
+            >
+              <Linkedin className="w-5 h-5 group-hover:animate-pulse" />
+              <span className="font-secondary">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/ich-youness"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-prime-gray hover:text-prime-light transition-colors duration-300 group"
@@ -38,7 +47,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-prime-dark/30 text-center">
           <p className="font-secondary text-prime-gray/60">
-            © {new Date().getFullYear()} PrimeAgents. Building the future with intelligent AI solutions.
+            © {new Date().getFullYear()} Youness. Building intelligent systems with AI and clean engineering.
           </p>
         </div>
       </div>

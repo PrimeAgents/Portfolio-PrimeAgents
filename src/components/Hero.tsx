@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, Brain } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -23,34 +24,65 @@ const Hero: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-8">
+          {/* Profile Photo */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="w-32 h-32 bg-gradient-to-r from-prime-light to-prime-gray rounded-full flex items-center justify-center text-6xl font-asimovian font-bold text-prime-black">
+              Y
+            </div>
+          </motion.div>
+
           {/* Main heading */}
-          <h1 className="font-asimovian text-5xl md:text-7xl lg:text-8xl font-bold">
+          <motion.h1 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-asimovian text-5xl md:text-7xl lg:text-8xl font-bold"
+          >
             <span className="bg-gradient-to-r from-prime-light via-prime-gray to-prime-light bg-clip-text text-transparent animate-gradient">
-              PrimeAgents
+              Youness
             </span>
-          </h1>
+          </motion.h1>
           
           {/* Subtitle */}
-          <p className="font-secondary text-xl md:text-2xl lg:text-3xl text-prime-gray max-w-4xl mx-auto leading-relaxed">
-            Building the Future with{' '}
-            <span className="text-prime-light font-semibold">Intelligent AI Agents</span>
-            {' '}& Advanced IT Solutions
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="font-secondary text-xl md:text-2xl lg:text-3xl text-prime-gray max-w-4xl mx-auto leading-relaxed"
+          >
+            <span className="text-prime-light font-semibold">AI Engineer</span> |{' '}
+            <span className="text-prime-light font-semibold">Full-Stack Developer</span> |{' '}
+            <span className="text-prime-light font-semibold">Agentic AI Builder</span>
+          </motion.p>
           
           {/* Description */}
-          <p className="font-secondary text-lg text-prime-gray/80 max-w-2xl mx-auto">
-            We specialize in creating powerful, autonomous AI systems that revolutionize 
-            cybersecurity, automation, and intelligent decision-making processes.
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="font-secondary text-lg text-prime-gray/80 max-w-2xl mx-auto"
+          >
+            I build intelligent systems that combine AI, automation, and clean engineering.
+          </motion.p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
+          >
             <a
-              href="#portfolio"
+              href="#projects"
               className="glow-border group"
             >
               <div className="bg-prime-black px-8 py-4 rounded-xl font-secondary font-semibold text-prime-light hover:text-white transition-all duration-300 group-hover:bg-prime-dark/20">
-                Explore Our Work
+                View My Projects
               </div>
             </a>
             
@@ -58,9 +90,9 @@ const Hero: React.FC = () => {
               href="#contact"
               className="px-8 py-4 border-2 border-prime-gray/30 rounded-xl font-secondary font-semibold text-prime-gray hover:text-prime-light hover:border-prime-light/50 transition-all duration-300 hover:bg-prime-light/5"
             >
-              Get In Touch
+              Contact Me
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

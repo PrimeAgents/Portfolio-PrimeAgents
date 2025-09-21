@@ -10,13 +10,11 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/Logo-PrimeAgents-removebg-preview.jpg" 
-              alt="PrimeAgents Logo" 
-              className="h-10 w-auto"
-            />
+            <div className="w-10 h-10 bg-gradient-to-r from-prime-light to-prime-gray rounded-xl flex items-center justify-center">
+              <span className="font-asimovian text-prime-black font-bold text-lg">Y</span>
+            </div>
             <span className="font-asimovian text-xl font-bold text-prime-light">
-              PrimeAgents
+              Youness
             </span>
           </div>
 
@@ -28,8 +26,11 @@ const Header: React.FC = () => {
             <a href="#about" className="text-prime-gray hover:text-prime-light transition-colors duration-300">
               About
             </a>
-            <a href="#portfolio" className="text-prime-gray hover:text-prime-light transition-colors duration-300">
-              Portfolio
+            <a href="#projects" className="text-prime-gray hover:text-prime-light transition-colors duration-300">
+              Projects
+            </a>
+            <a href="#tech-stack" className="text-prime-gray hover:text-prime-light transition-colors duration-300">
+              Tech Stack
             </a>
             <a href="#contact" className="text-prime-gray hover:text-prime-light transition-colors duration-300">
               Contact
@@ -64,11 +65,18 @@ const Header: React.FC = () => {
                 About
               </a>
               <a 
-                href="#portfolio" 
+                href="#projects" 
                 className="text-prime-gray hover:text-prime-light transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Portfolio
+                Projects
+              </a>
+              <a 
+                href="#tech-stack" 
+                className="text-prime-gray hover:text-prime-light transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Tech Stack
               </a>
               <a 
                 href="#contact" 

@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Projects from './components/Portfolio';
+import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -12,7 +13,8 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Portfolio />
+      <Projects />
+      <TechStack />
       <Contact />
       <Footer />
     </div>

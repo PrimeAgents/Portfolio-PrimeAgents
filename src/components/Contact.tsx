@@ -1,30 +1,55 @@
 import React from 'react';
-import { Mail, MessageSquare, Send, Github } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Mail, Send, Github, Linkedin, User, MessageSquare } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted');
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-prime-black to-prime-dark/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-asimovian text-4xl md:text-5xl font-bold text-prime-light mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="font-asimovian text-4xl md:text-5xl font-bold text-prime-light mb-6"
+          >
             Get In Touch
-          </h2>
+          </motion.h2>
           <div className="w-24 h-1 bg-gradient-to-r from-prime-light to-prime-gray mx-auto mb-8"></div>
-          <p className="font-secondary text-lg text-prime-gray max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge AI solutions? Let's discuss how PrimeAgents can help you build the future.
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="font-secondary text-lg text-prime-gray max-w-3xl mx-auto"
+          >
+            Ready to bring your AI project to life? Let's discuss how we can work together to build something amazing.
+          </motion.p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left side - Contact info */}
-            <div className="space-y-8">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
               <div className="space-y-6">
                 <h3 className="font-asimovian text-2xl font-bold text-prime-light mb-6">
                   Let's Build Something Amazing
                 </h3>
                 <p className="font-secondary text-prime-gray leading-relaxed">
-                  Whether you need AI agents for cybersecurity, automation solutions, or custom AI development, our team is ready to bring your vision to life.
+                  Whether you need AI agents, trading bots, SaaS platforms, or custom AI development, I'm ready to bring your vision to life with cutting-edge technology and clean engineering.
                 </p>
               </div>
 
@@ -36,16 +61,31 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-secondary text-prime-light font-semibold">Upwork</p>
-                    {/* <p className="font-secondary text-prime-gray">prime.agents01@gmail.com */}
                     <a 
                       href="https://www.upwork.com/freelancers/~01d9cb8461d264d355" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="font-secondary text-prime-gray hover:text-prime-light transition-colors duration-300"
                     >
-                      Youness I.
+                      View Profile
                     </a>
-                    {/* </p> */}
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 group">
+                  <div className="p-3 bg-prime-dark/40 rounded-xl border border-prime-gray/20 group-hover:border-prime-light/30 transition-colors duration-300">
+                    <Linkedin className="w-6 h-6 text-prime-light group-hover:animate-pulse" />
+                  </div>
+                  <div>
+                    <p className="font-secondary text-prime-light font-semibold">LinkedIn</p>
+                    <a 
+                      href="https://linkedin.com/in/youness-ai-engineer" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="font-secondary text-prime-gray hover:text-prime-light transition-colors duration-300"
+                    >
+                      Connect with me
+                    </a>
                   </div>
                 </div>
 
@@ -56,21 +96,27 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="font-secondary text-prime-light font-semibold">GitHub</p>
                     <a 
-                      href="https://github.com/PrimeAgents" 
+                      href="https://github.com/ich-youness" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="font-secondary text-prime-gray hover:text-prime-light transition-colors duration-300"
                     >
-                      github.com/PrimeAgents
+                      github.com/ich-youness
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Right side - Contact form */}
-            {/* <div className="bg-prime-dark/30 backdrop-blur-sm border border-prime-gray/20 rounded-2xl p-8">
-              <form className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-prime-dark/30 backdrop-blur-sm border border-prime-gray/20 rounded-2xl p-8"
+            >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block font-secondary text-prime-light font-semibold mb-2">
                     Name
@@ -115,7 +161,7 @@ const Contact: React.FC = () => {
                   <Send className="w-5 h-5 ml-2 group-hover:animate-pulse" />
                 </button>
               </form>
-            </div> */}
+            </motion.div>
           </div>
         </div>
       </div>
